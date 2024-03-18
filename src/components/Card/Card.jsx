@@ -1,21 +1,26 @@
 import React from "react";
 import "../styles.css";
 import { SlNotebook } from "react-icons/sl";
+import documents from "../../assets/cards-images/documents.png";
+import web from "../../assets/cards-images/programming.png";
+import ux from "../../assets/cards-images/ux-design.png";
 
 const Card = () => {
 	const services = [
 		{
 			title: "Business & Product Concept",
 			text: "Analyse business and product concepts at Star-up Workshops or Ongoing Projects's Audits and prepares a viable and sensible product roadmap for achieving a perfect market fit.",
-			icon: <SlNotebook className="icon" />,
+			icon: documents,
 		},
 		{
 			title: "Web & Mobile Development",
 			text: "Plan, develop and test high-quality-web-application using AngunlarJS, NodeJS, JavaScript, Typescript, HTML5 and SASS/CSS3 frameworks and native mobile languages.",
+			icon: web,
 		},
 		{
 			title: "UX & UI Design",
 			text: "Sketch information architecture and simple mock-ups, convert the into clickable prototypes and finish with usable interface designs to deliver a good and reliable user experience.",
+			icon: ux,
 		},
 	];
 	return (
@@ -30,7 +35,7 @@ const Card = () => {
 			<div className="card-container">
 				{services.map((service, index) => (
 					<div key={index} className="card">
-						{/* <div className="card-icon">{service.icon}</div> */}
+						<img src={service.icon} />
 						<h3>{service.title}</h3>
 						<p>{service.text}</p>
 						<button className="card-btn">Learn more</button>

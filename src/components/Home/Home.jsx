@@ -5,97 +5,98 @@ import icons from "../../assets/logos/icons.png";
 import brands from "../../assets/aside/clients.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Card from "../Card/Card";
+import cellphone from "../../assets/main-images/cellphone.jpg";
 
 const Home = () => {
 	return (
 		<div className="home-container">
-			<div className="home-presentation">
-				<h1 className="home-title">
-					We build beautiful and reliable web solutions
-				</h1>
-				<p>
-					We strongly believe that communication, trust and transparency are the
-					essential elements of succesful business relationship. Ready for the
-					journey?
-				</p>
-				<div className="home-buttons">
-					<button className="btn-1">Learn more</button>
-					<button className="btn-2">
-						Our Projects <IoIosArrowRoundForward />
-					</button>
-				</div>
-			</div>
-			<Card></Card>
-			<div className="main">
-				<div className="text">
-					<h2>We use cutting edge technology</h2>
+			<header>
+				<div className="header">
+					<h1 className="header-title">
+						We build beautiful and reliable web solutions
+					</h1>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-						aspernatur quaerat, eaque tempore maiores tenetur at nobis eveniet?
-						Ratione veniam repudiandae facilis. Blanditiis, iusto temporibus
-						odio exercitationem ratione error at. Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Dolorem, sit doloremque.
+						We strongly believe that communication, trust and transparency are
+						the essential elements of succesful business relationship.
 					</p>
+					<p>Ready for the journey?</p>
+					<div className="header-buttons">
+						<button className="btn-1">Learn more</button>
+						<button className="btn-2">
+							Our Projects <IoIosArrowRoundForward className="arrow-icon" />
+						</button>
+					</div>
 				</div>
-				<div className="icons">
-					<img src={icons} alt="icons" />
+			</header>
+			<main>
+				<Card></Card>
+				<div className="main">
+					<div className="text">
+						<h2>We use cutting edge technology</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+							aspernatur quaerat, eaque tempore maiores tenetur at nobis
+							eveniet? Ratione veniam repudiandae facilis. Blanditiis, iusto
+							temporibus odio exercitationem ratione error at. Lorem ipsum dolor
+							sit amet consectetur adipisicing elit. Dolorem, sit doloremque.
+						</p>
+					</div>
+					<div className="icons">
+						<img src={icons} alt="icons" />
+					</div>
 				</div>
-			</div>
-			<div className="brands">
-				<img src={brands}></img>
-			</div>
-			<div className="main-cards">
-				<div className="main-card">
-					<h2>Get in touch with us</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Perferendis, repudiandae quas!
-					</p>
-					<button>Hire us</button>
+				<div className="brands">
+					<img src={brands}></img>
 				</div>
-				<div className="main-card">
-					<h2>Our Projects</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Perferendis, repudiandae quas!
-					</p>
-					<button>See Projects</button>
+				<div className="main-cards">
+					<div className="main-card">
+						<h2>Get in touch with us</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Perferendis, repudiandae quas!
+						</p>
+						<button>Hire us</button>
+					</div>
+					<div className="main-card">
+						<h2>Our Projects</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Perferendis, repudiandae quas!
+						</p>
+						<img src={cellphone} alt="cellphone" />
+						<button>See Projects</button>
+					</div>
 				</div>
-			</div>
+			</main>
 			<footer>
-				<div className="main-cards"></div>
-				<div className="footer-text">
-					<h6>compleet labs</h6>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-						dignissimos cum explicabo corrupti numquam totam iure eveniet
-						suscipit? Laborum, consequuntur!
-					</p>
-				</div>
-				<div className="maps">
-					<div className="sitemap">
-						<h6>SITEMAP</h6>
-						<div>
-							<a>Home</a>
-							<a>Technology</a>
-							<a>Services</a>
-							<a>About</a>
-						</div>
+				<div className="main-cards">
+					<div className="main-card footer-cards">
+						<h6>compleet labs</h6>
+						<p className="main-card-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Repellendus odio, rerum excepturi quisquam minus quam. Tempore
+							quidem soluta perspiciatis maiores.
+						</p>
 					</div>
-					<div className="sitemap">
-						<h6>CASE STUDIES</h6>
-						<div>
-							<a>Swiss Airlines</a>
-							<a>Google</a>
-							<a>Apple</a>
-							<a>Nike</a>
+					<div className="main-card maps footer-cards">
+						<div className="map">
+							<h6>SITEMAP</h6>
+							<span>Home</span>
+							<span>Technology</span>
+							<span>Services</span>
+							<span>About</span>
 						</div>
-					</div>
-					<div className="sitemap">
-						<h6>SITEMAP</h6>
-						<div>
-							<a>Jobs</a>
-							<a>Hire us</a>
+						<div className="map">
+							<h6>CASE STUDIES</h6>
+							<span>Swiss Airlines</span>
+							<span>Google</span>
+							<span>Apple</span>
+							<span>Nike</span>
+						</div>
+						<div className="map">
+							<h6>CONTACT</h6>
+							<span>Jobs</span>
+							<span>Hire us</span>
 						</div>
 					</div>
 				</div>
