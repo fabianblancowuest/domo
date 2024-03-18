@@ -1,0 +1,14 @@
+@font-face {
+	font-family: "Circular Std";
+	src: url("./fonts/circular-std-medium-500.ttf") format("truetype");
+}
+
+:root {
+	font-family: "Circular Std";
+	background-color: rgb(40, 51, 69);
+	background-image: url(./assets/asset-background.jpg);
+	background-repeat: no-repeat;
+	background-size: 48vw;
+	background-position: 105% 0%;
+	overflow-x: hidden;
+}
