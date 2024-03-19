@@ -2,6 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./../styles.css";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Form = () => {
 	const form = useRef();
@@ -30,6 +31,13 @@ const Form = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
+					Swal.fire({
+						position: "top-end",
+						icon: "success",
+						title: "Email sent successfully",
+						showConfirmButton: false,
+						timer: 1500,
+					});
 				},
 				(error) => {
 					console.log(error.text);
@@ -40,7 +48,7 @@ const Form = () => {
 	const handleSubmit = (event) => {
 		// event.preventDefault();
 		sendEmail(event);
-		setstate("");
+		setstate(initialState);
 	};
 	return (
 		<div className="form-container" id="contact">
@@ -50,21 +58,21 @@ const Form = () => {
 					type="text"
 					name="name"
 					placeholder="Enter your name..."
-					// value={initialState.name}
+					value={state.name}
 					onChange={handleChange}
 				></input>
 				<input
 					type="text"
 					name="email"
 					placeholder="Enter your email..."
-					// value={initialState.email}
+					value={state.email}
 					onChange={handleChange}
 				></input>
 				<input
 					type="text"
 					name="subject"
 					placeholder="Enter subject..."
-					// value={initialState.subject}
+					value={state.subject}
 					onChange={handleChange}
 				></input>
 				<textarea
@@ -72,6 +80,7 @@ const Form = () => {
 					cols="30"
 					rows="10"
 					type="text"
+					value={state.message}
 					name="message"
 					placeholder="Leave me your message..."
 					onChange={handleChange}

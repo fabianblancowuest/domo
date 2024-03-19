@@ -47,26 +47,26 @@ const Nav = () => {
 				</li>
 
 				<li>
-					<NavLink to={"/home#services"} onClick={handleGoToPrincipalMain}>
+					<NavLink to={"/#services"} onClick={handleGoToPrincipalMain}>
 						Services
 					</NavLink>
 				</li>
 
 				<li>
-					<NavLink to={"/home#technology"} onClick={handleGoToPrincipalMain}>
+					<NavLink to={"/#technology"} onClick={handleGoToPrincipalMain}>
 						Technology
 					</NavLink>
 				</li>
 
 				<li>
-					<NavLink to={"/home#cases-studies"} onClick={handleGoToPrincipalMain}>
+					<NavLink to={"/#cases-studies"} onClick={handleGoToPrincipalMain}>
 						Case studies
 					</NavLink>
 				</li>
 
 				<li>
 					<NavLink
-						to={"/home#contact"}
+						to={"/#about"}
 						onClick={handleGoToPrincipalMain}
 						className={({ isActive }) => {
 							isActive ? "active" : "navLink";
