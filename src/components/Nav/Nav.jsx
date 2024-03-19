@@ -37,7 +37,7 @@ const Nav = () => {
 				</li>
 				<li>
 					<NavLink
-						to={"/home"}
+						to={"/"}
 						className={({ isActive }) => {
 							isActive ? "active" : "navLink";
 						}}

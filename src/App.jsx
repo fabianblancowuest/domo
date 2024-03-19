@@ -10,10 +10,6 @@ function App() {
 		<>
 			<Nav></Nav>
 			<Routes>
-				{/* <Route
-					path="/"
-					element={<Navigate to="/home" replace></Navigate>}
-				></Route> */}
 				<Route path="/" element={<Home></Home>}></Route>
 				<Route path="/contact" element={<Form></Form>}></Route>
 			</Routes>
