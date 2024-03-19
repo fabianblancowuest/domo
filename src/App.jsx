@@ -3,13 +3,17 @@ import "./App.css";
 import Form from "./components/Form/Form";
 import Home from "./components/Home/Home";
 import Nav from "./components/Nav/Nav";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
 	return (
 		<>
 			<Nav></Nav>
 			<Routes>
+				<Route
+					path="/"
+					element={<Navigate to="/home" replace></Navigate>}
+				></Route>
 				<Route path="/home" element={<Home></Home>}></Route>
 				<Route path="/contact" element={<Form></Form>}></Route>
 			</Routes>

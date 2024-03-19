@@ -38,7 +38,6 @@ const Nav = () => {
 				<li>
 					<NavLink
 						to={"/home"}
-						activeClassName="active"
 						className={({ isActive }) => {
 							isActive ? "active" : "navLink";
 						}}
@@ -85,7 +84,7 @@ const Nav = () => {
 						}}
 					>
 						<HiRectangleGroup />
-						<span> Hire us</span>
+						Hire us
 					</NavLink>
 				</li>
 			</ul>
