@@ -1,13 +1,41 @@
-import React from "react";
-import "../styles.css";
-
+import "./../styles.css";
 import icons from "../../assets/logos/icons.png";
 import brands from "../../assets/aside/clients.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Card from "../Card/Card";
-import cellphone from "../../assets/main-images/cellphone.jpg";
+import cellphone from "../../assets/main-images/domo-card-removebg-preview.png";
+import { CiTwitter } from "react-icons/ci";
+import { AiOutlineFacebook } from "react-icons/ai";
+import { IoLogoInstagram } from "react-icons/io5";
+import { GrLinkedin } from "react-icons/gr";
+import { FaGithubSquare } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
+	const sitemap = ["Home", "Technology", "Services", "About"];
+	const caseStudies = ["Swiss Airlines", "Google", "Apple", "Nike"];
+	const contact = [
+		{
+			title: "Jobs",
+			site: "",
+			targetAt: "",
+		},
+		{
+			title: "Hire us",
+			site: "/contact",
+			targetAt: "",
+		},
+		{
+			title: "LinkedIn",
+			site: "https://www.linkedin.com/in/fabianblancowuest/",
+			targetAt: "_blank",
+		},
+		{
+			title: "GitHub",
+			site: "https://github.com/fabianblancowuest",
+			targetAt: "_blank",
+		},
+	];
 	return (
 		<div className="home-container">
 			<header>
@@ -29,9 +57,11 @@ const Home = () => {
 				</div>
 			</header>
 			<main>
-				<Card></Card>
+				<div id="services">
+					<Card></Card>
+				</div>
 				<div className="main">
-					<div className="text">
+					<div className="text" id="technology">
 						<h2>We use cutting edge technology</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
@@ -45,58 +75,96 @@ const Home = () => {
 						<img src={icons} alt="icons" />
 					</div>
 				</div>
-				<div className="brands">
+				<div className="brands" id="cases-studies">
 					<img src={brands}></img>
 				</div>
 				<div className="main-cards">
 					<div className="main-card">
-						<h2>Get in touch with us</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Perferendis, repudiandae quas!
-						</p>
-						<button>Hire us</button>
+						<div className="main-card-text">
+							<h2>Get in touch with us</h2>
+							<p>
+								Maecenas sed diam eget risus varius blandit sit amet non magna.
+							</p>
+							<button>Hire us</button>
+						</div>
 					</div>
 					<div className="main-card">
-						<h2>Our Projects</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Perferendis, repudiandae quas!
-						</p>
-						<img src={cellphone} alt="cellphone" />
-						<button>See Projects</button>
+						<div className="main-card-text">
+							<h2>Our Projects</h2>
+							<p>
+								Maecenas sed diam eget risus varius blandit sit amet non magna.
+							</p>
+							<button>See Projects</button>
+						</div>
+						<div className="main-card-img">
+							<img src={cellphone} alt="cellphone" />
+						</div>
 					</div>
 				</div>
 			</main>
-			<footer>
+			<footer id="about">
 				<div className="main-cards">
 					<div className="main-card footer-cards">
 						<h6>compleet labs</h6>
 						<p className="main-card-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Repellendus odio, rerum excepturi quisquam minus quam. Tempore
-							quidem soluta perspiciatis maiores.
+							Please contact me on one of my social networks below or fill in
+							the contact form.
 						</p>
+						<div className="footer-icons">
+							<span>
+								<CiTwitter></CiTwitter>
+							</span>
+							<span>
+								<AiOutlineFacebook></AiOutlineFacebook>
+							</span>
+							<span>
+								<IoLogoInstagram></IoLogoInstagram>
+							</span>
+							<span>
+								<NavLink
+									className="contact-icon"
+									to={"https://www.linkedin.com/in/fabianblancowuest/"}
+									target="_blank"
+								>
+									<GrLinkedin></GrLinkedin>
+								</NavLink>
+							</span>
+							<span>
+								<NavLink
+									className="contact-icon"
+									to={"https://github.com/fabianblancowuest"}
+									target="_blank"
+								>
+									<FaGithubSquare></FaGithubSquare>
+								</NavLink>
+							</span>
+						</div>
 					</div>
 					<div className="main-card maps footer-cards">
 						<div className="map">
 							<h6>SITEMAP</h6>
-							<span>Home</span>
-							<span>Technology</span>
-							<span>Services</span>
-							<span>About</span>
+							{sitemap.map((item, index) => (
+								<span key={index}>{item}</span>
+							))}
 						</div>
 						<div className="map">
 							<h6>CASE STUDIES</h6>
-							<span>Swiss Airlines</span>
-							<span>Google</span>
-							<span>Apple</span>
-							<span>Nike</span>
+							{caseStudies.map((item, index) => (
+								<span key={index}>{item}</span>
+							))}
 						</div>
 						<div className="map">
 							<h6>CONTACT</h6>
-							<span>Jobs</span>
-							<span>Hire us</span>
+							{contact.map((item, index) => (
+								<NavLink
+									className={"contact"}
+									key={index}
+									to={item.site}
+									target={item.targetAt}
+								>
+									{item.title}
+								</NavLink>
+							))}
 						</div>
 					</div>
 				</div>
