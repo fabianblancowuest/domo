@@ -112,13 +112,13 @@ const Home = () => {
 						</p>
 						<div className="footer-icons">
 							<span>
-								<CiTwitter></CiTwitter>
+								<CiTwitter />
 							</span>
 							<span>
-								<AiOutlineFacebook></AiOutlineFacebook>
+								<AiOutlineFacebook />
 							</span>
 							<span>
-								<IoLogoInstagram></IoLogoInstagram>
+								<IoLogoInstagram />
 							</span>
 							<span>
 								<NavLink
@@ -126,7 +126,7 @@ const Home = () => {
 									to={"https://www.linkedin.com/in/fabianblancowuest/"}
 									target="_blank"
 								>
-									<GrLinkedin></GrLinkedin>
+									<GrLinkedin id="linkedin" />
 								</NavLink>
 							</span>
 							<span>
@@ -135,7 +135,7 @@ const Home = () => {
 									to={"https://github.com/fabianblancowuest"}
 									target="_blank"
 								>
-									<FaGithubSquare></FaGithubSquare>
+									<FaGithubSquare id="github" />
 								</NavLink>
 							</span>
 						</div>

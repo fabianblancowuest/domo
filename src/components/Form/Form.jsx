@@ -49,21 +49,21 @@ const Form = () => {
 				<input
 					type="text"
 					name="name"
-					placeholder="Enter your name please"
+					placeholder="Enter your name..."
 					// value={initialState.name}
 					onChange={handleChange}
 				></input>
 				<input
 					type="text"
 					name="email"
-					placeholder="Enter your email please"
+					placeholder="Enter your email..."
 					// value={initialState.email}
 					onChange={handleChange}
 				></input>
 				<input
 					type="text"
 					name="subject"
-					placeholder="Enter subject please"
+					placeholder="Enter subject..."
 					// value={initialState.subject}
 					onChange={handleChange}
 				></input>
@@ -73,7 +73,7 @@ const Form = () => {
 					rows="10"
 					type="text"
 					name="message"
-					placeholder="Leave me your message"
+					placeholder="Leave me your message..."
 					onChange={handleChange}
 				></textarea>
 				<button type="submit">Submit</button>
