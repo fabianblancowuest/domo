@@ -1,6 +1,4 @@
-import React from "react";
 import "../styles.css";
-import { SlNotebook } from "react-icons/sl";
 import documents from "../../assets/cards-images/documents.png";
 import web from "../../assets/cards-images/programming.png";
 import ux from "../../assets/cards-images/ux-design.png";

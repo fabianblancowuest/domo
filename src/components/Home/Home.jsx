@@ -57,9 +57,9 @@ const Home = () => {
 				</div>
 			</header>
 			<main>
-				<div id="services">
+				<section id="services">
 					<Card></Card>
-				</div>
+				</section>
 				<div className="main">
 					<div className="text" id="technology">
 						<h2>We use cutting edge technology</h2>

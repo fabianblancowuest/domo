@@ -263,12 +263,38 @@ a:hover {
 .main-card-img {
 	position: relative;
 	left: 45%;
-	bottom: 96.5%;
+	bottom: 88%;
 	max-width: 90%;
 }
+
 .main-card img {
 	max-width: 60%;
 }
+
+@media screen and (max-width: 1800px) {
+	.main-card {
+		max-height: 32vh;
+	}
+	.main-card-img {
+		position: relative;
+		left: 48%;
+		bottom: 94%;
+		max-width: 90%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.main-card {
+		max-height: 25vh;
+	}
+	.main-card-img {
+		position: relative;
+		left: 48%;
+		bottom: 94%;
+		max-width: 70%;
+	}
+}
+
 .main-cards button {
 	display: flex;
 	margin-top: auto;
@@ -317,17 +343,7 @@ footer {
 .footer-icons > * {
 	color: rgb(200, 200, 200);
 }
-@media (max-width: 1600px) {
-	.main-card {
-		max-height: 32vh;
-	}
-	.main-card-img {
-		position: relative;
-		left: 48%;
-		bottom: 94%;
-		max-width: 90%;
-	}
-}
+
 /* Form */
 .form-container {
 	margin-top: 5vh;

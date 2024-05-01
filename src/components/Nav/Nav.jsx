@@ -7,13 +7,13 @@ const Nav = () => {
 	const handleGoToPrincipalMain = () => {
 		navigate("/");
 		setTimeout(() => {
-			const element = document.getElementById("services");
+			const services = document.getElementById("services");
 			const technology = document.getElementById("technology");
 			const casesStudies = document.getElementById("cases-studies");
 			const about = document.getElementById("about");
 			const contact = document.getElementById("contact");
-			if (element) {
-				element.scrollIntoView({ behavior: "smooth" });
+			if (services) {
+				services.scrollIntoView({ behavior: "smooth" });
 			}
 			if (technology) {
 				technology.scrollIntoView({ behavior: "smooth" });
@@ -27,7 +27,7 @@ const Nav = () => {
 			if (contact) {
 				contact.scrollIntoView({ behavior: "smooth" });
 			}
-		}, 100); // Espera un momento para que se renderice la página antes de hacer scroll
+		}, 100);
 	};
 	return (
 		<div className="nav-container">
