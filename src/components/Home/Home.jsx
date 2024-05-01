@@ -16,9 +16,9 @@ const Home = () => {
 	const caseStudies = ["Swiss Airlines", "Google", "Apple", "Nike"];
 	const contact = [
 		{
-			title: "Jobs",
-			site: "",
-			targetAt: "",
+			title: "Portfolio",
+			site: "https://fabianblancowuest.netlify.app/",
+			targetAt: "_blank",
 		},
 		{
 			title: "Hire us",
